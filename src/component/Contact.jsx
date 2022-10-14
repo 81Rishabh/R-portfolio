@@ -1,6 +1,5 @@
 import React from 'react'
 import Heading from './Heading'
-import ImageWrapper from './ImageWrapper';
 import userPng from '../assets/user.png';
 
 function Contact() {

@@ -5,8 +5,6 @@ import gosocialPng from '../assets/gosocial.png';
 import chatAppPng from '../assets/chatapp.png';
 import sortingVisualerPng from '../assets/sortingVisualizer.png';
 import cardGamepng from '../assets/HunTheAce.png';
-import abstractJpg from '../assets/abstract.jpg';
-
 function Project() { 
   const pngs = [
     {

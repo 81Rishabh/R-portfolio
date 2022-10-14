@@ -2,7 +2,6 @@
 import './App.css';
 import About from './component/About';
 import Contact from './component/Contact';
-import Dropdown from './component/Dropdown';
 import Hero from './component/Hero';
 import Navbar from './component/Navbar';
 import Project from './component/Project';
