@@ -46,7 +46,7 @@ function Technology() {
      },
   ]
   return (
-    <div className="w-11/12 h-auto mx-auto my-6 rounded bg-gray-50 shadow-sm p-5 md:h-96" id="technology">
+    <div className="w-11/12 h-auto mx-auto my-6 rounded bg-gray-50 shadow-sm p-5 md:h-96 dark:bg-slate-900 dark:border dark:border-slate-800 dark:backdrop-blur-md" id="technology">
       <Heading text="Technology I Used"/>
       <div className="flex mx-auto w-10/12 justify-between items-center h-full flex-wrap p-5 md:m-0 md:mx-auto">
            {

@@ -9,7 +9,7 @@ import Technology from './component/Technology';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App dark:bg-black">
        <Navbar />
        <Hero />
        <About />

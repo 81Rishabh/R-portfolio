@@ -29,7 +29,7 @@ function Project() {
     },
   ]
   return (
-    <div className="w-11/12 h-auto mx-auto my-6 rounded  bg-gray-50 shadow-sm p-5" id="project" >
+    <div className="w-11/12 h-auto mx-auto my-6 rounded  bg-gray-50 shadow-sm p-5 dark:bg-slate-900 dark:border dark:border-slate-800" id="project" >
       <Heading text="Projects"/>
        <div className="projects flex w-10/12 mx-auto justify-between md:p-5 flex-wrap flex-col md:flex-row">
         {
