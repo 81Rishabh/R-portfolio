@@ -15,7 +15,7 @@ function Navbar() {
       document.documentElement.classList.remove('dark');
       setdark(false);
     }
-  },[localStorage.theme]);
+  },[]);
 
   function handleDarkMode() {
     if (!dark) {
