@@ -24,7 +24,7 @@ function Sidebar(props) {
   }
   
   return (
-    <div className={`${!props.open ? 'translate-x-[25rem]' : 'translate-x-0'} w-[25rem] bg-zinc-700 h-full fixed overflow-hidden right-0 top-0 p-3 z-50  transition-all duraction-200"`}>
+    <div className={`${!props.open ? 'translate-x-[25rem]' : 'translate-x-0'} w-[20rem] bg-zinc-700 h-full fixed overflow-hidden right-0 top-0 p-3 z-50  transition-all duraction-200"`}>
       <h1 className="text-xl text-white font-medium flex justify-between">
         <span onClick={() => props.handleOpen()} className="cursor-pointer">
             <svg width="28" height="28" fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
