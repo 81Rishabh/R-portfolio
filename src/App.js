@@ -3,13 +3,12 @@ import React, { useRef, useLayoutEffect } from "react";
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-import gsap from "gsap-trial";
-import { ScrollTrigger } from "gsap-trial/ScrollTrigger";
-import { TextPlugin } from "gsap-trial/TextPlugin";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
-
 import Footer from "./components/Footer";
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, TextPlugin);
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
+
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 function App() {
   const main = useRef();
