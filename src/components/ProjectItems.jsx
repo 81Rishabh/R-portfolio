@@ -9,6 +9,7 @@ function ProjectItems({ it }) {
           src={img}
           alt="chitchat"
           className="w-[20rem] object-contain border-2 rounded-lg border-zinc-600 "
+          loading="lazy"
         />
       </div>
       <div className="right flex flex-col items-center text-center md:text-left md:items-start py-2 md:pl-4">
