@@ -1,7 +1,12 @@
-import React from "react";
+
+import React ,{useContext} from "react";
+import { ThemeContext } from "../App";
+
 
 function ProjectItems({ it }) {
+  const {theme} = useContext(ThemeContext);
   const { img, title, description, date, deployLink, githubLink } = it;
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-[40%_auto] bg-zinc-800 md:bg-transparent p-3 rounded-xl">
       <div className="left w-full flex justify-center items-start p-3">
@@ -40,7 +45,8 @@ function ProjectItems({ it }) {
           <a href={deployLink}>
             <button
               type="button"
-              className="bg-indigo-800 p-2 text-white font-medium rounded-md hover:opacity-90 shadow-md hover:scale-95 transition-all duraction-100"
+              style={{backgroundColor : theme}}
+              className={`p-2 text-white font-medium rounded-md hover:opacity-90 shadow-md hover:scale-95 transition-all duraction-100`}
             >
               Preview 🚀
             </button>

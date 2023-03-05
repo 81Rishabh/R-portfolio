@@ -44,6 +44,15 @@
     backdrop-filter: blur(10px);
     opacity: 0.9;
   }
+  .colors div:hover {
+    cursor: pointer;
+  }
+
+  .enable {
+     outline-width: 2px;
+     outline-style: solid;
+     outline-offset: 5px;
+  }
 
   @keyframes wiggle {
     from {

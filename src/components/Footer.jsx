@@ -1,12 +1,17 @@
-import React  from "react";
+
+import React ,{useContext} from "react";
+import { ThemeContext } from "../App";
+
 
 function Footer({ scrollTo }) {
+    const {theme} = useContext(ThemeContext);
   return (
     <footer className="h-48 mt-3 w-3/5 mx-auto flex justify-center items-center">
       <button
         type="button"
+        style={{backgroundColor: theme}}
         onClick={scrollTo}
-        className="flex items-center justify-center bg-indigo-800 w-24 max-w-32 drop-shadow-md py-3 text-white rounded-md hover:opacity-90 shadow-md hover:scale-95 transition-all duraction-100"
+        className="flex items-center justify-center  w-24 max-w-32 drop-shadow-md py-3 text-white rounded-md hover:opacity-90 shadow-md hover:scale-95 transition-all duraction-100"
       >
         <span className="mr-1">Top</span>
         <span>

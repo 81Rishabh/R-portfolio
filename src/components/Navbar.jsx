@@ -1,9 +1,10 @@
-import React ,{useEffect, useRef} from "react";
+import React ,{useEffect, useRef,useContext} from "react";
+import { ThemeContext } from "../App";
 
 
-
-function Navbar() { 
+function Navbar(props) { 
   const navRef = useRef();
+  const {theme} = useContext(ThemeContext);
 
   useEffect(() => {
     function handleScroll() {
@@ -18,13 +19,14 @@ function Navbar() {
     return () => document.removeEventListener('scroll' , handleScroll);
   },[]);
   return (
-    <header className="h-24 sticky top-0 flex justify-center items-center z-50 transition ease-linear duration-300" ref={navRef}  id="header">
+    <header className="h-24 sticky top-0 flex justify-center items-center z-40 transition ease-linear duration-300" ref={navRef}  id="header">
       <nav className="w-11/12 md:w-2/4 mx-auto flex items-center justify-between">
         <div className="navbar-logo">
-          <h1 className="text-xl font-semibold text-white relative logo">
+          <h1 className={`text-xl font-semibold text-white relative logo before:bg-[${theme}]`}>
             FrontendDevs
           </h1>
         </div>
+
         <div className="flex w-36 list-none  justify-evenly items-center">
           <li>
            <a href="https://www.instagram.com/_frontend_devs/">
@@ -86,6 +88,12 @@ function Navbar() {
             </a>
           </li>
         </div>
+
+       <div className="setting">
+         <svg onClick={() => props.handleOpen()} width="28" height="28" fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="cursor-pointer hover:rotate-45 transition duration-200">
+          <path d="M3.34 17.002a10.02 10.02 0 0 1-.978-2.326 3 3 0 0 0 .002-5.347 9.99 9.99 0 0 1 2.501-4.337 3 3 0 0 0 4.631-2.674 9.99 9.99 0 0 1 5.007.002 3 3 0 0 0 4.632 2.672 9.99 9.99 0 0 1 1.525 2.01c.433.749.757 1.53.978 2.326a3 3 0 0 0-.002 5.347 9.99 9.99 0 0 1-2.5 4.337 3 3 0 0 0-4.632 2.674 9.99 9.99 0 0 1-5.007-.002 3 3 0 0 0-4.632-2.672 10.02 10.02 0 0 1-1.525-2.01Zm5.66.196a4.993 4.993 0 0 1 2.25 2.77c.5.047 1 .048 1.5 0a4.993 4.993 0 0 1 2.25-2.77 4.993 4.993 0 0 1 3.525-.564c.29-.408.54-.843.748-1.298A4.993 4.993 0 0 1 18 12.002c0-1.26.47-2.437 1.273-3.334-.21-.455-.46-.89-.75-1.298A4.993 4.993 0 0 1 15 6.806a4.993 4.993 0 0 1-2.25-2.77c-.499-.047-1-.048-1.499-.001a4.993 4.993 0 0 1-2.25 2.77 4.993 4.993 0 0 1-3.526.565 7.99 7.99 0 0 0-.748 1.298A4.993 4.993 0 0 1 6 12.002a4.99 4.99 0 0 1-1.273 3.334c.21.455.46.89.75 1.298A4.993 4.993 0 0 1 9 17.198Zm3-2.196a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+         </svg>
+       </div>
       </nav>
     </header>
   );
