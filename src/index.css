@@ -3,18 +3,54 @@
 @tailwind utilities;
 
 @layer base {
- 
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   html {
-    font-family: 'Inter var' , sans-serif;
+    font-family: "Inter var", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #19181c;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 2;
+  }
+
+  li {
+    cursor: pointer;
+  }
+
+  .logo::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #2a1b68;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: -10px;
+    transform: rotate(45deg);
+  }
+
+  .active {
+    background: #19181c;
+    backdrop-filter: blur(10px);
+    opacity: 0.9;
   }
 
   @keyframes wiggle {
-     from {
-       transform: scale(0);
-     }
-     else {
-      transform :scale(1);
-     }
+    from {
+      transform: scale(0);
+    }
+    else {
+      transform: scale(1);
+    }
   }
 }
-
