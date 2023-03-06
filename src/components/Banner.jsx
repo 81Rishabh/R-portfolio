@@ -12,12 +12,7 @@ function Banner() {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from(".banner", {
-        duration: 1,
-        y: "50px",
-        ease: "ease-in",
-        opacity: "0",
-      });
+
       gsap.from("#heading", {
         duration: 1,
         y: "50px",
@@ -51,7 +46,7 @@ function Banner() {
     >
       <div className="wrapper">
         <div className="box w-[40rem] h-[40rem] rounded-[150px] bg-[#242329] rotate-45 absolute -left-60 -top-12"></div>
-        <div className="box justify-center items-center w-32 h-32 rounded-[30px] bg-transparent md:bg-[#242329] rotate-45 absolute md:flex bottom-0 right-0  md:right-[16%] md:top-1/2">
+        <div className="box  justify-center items-center w-20 h-20 rounded-[15px] bg-transparent md:bg-[#242329] opacity-90 rotate-45 absolute md:flex bottom-0 right-0  md:right-[16%] md:top-1/2">
           <img
             src={reactLogo}
             className="w-12 h-12 object-cover"

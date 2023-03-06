@@ -25,7 +25,7 @@ function Sidebar(props) {
     <div
       className={`${
         !props.open ? "translate-x-[25rem]" : "translate-x-0"
-      } w-[20rem] bg-zinc-700 h-full fixed overflow-hidden right-0 top-0 p-3 z-50  transition-all duraction-200"`}
+      } w-[20rem] bg-zinc-700 h-full fixed overflow-hidden right-0 top-0 p-3 z-50 shadow-lg transition-all duraction-200"`}
     >
       <h1 className="text-xl text-white font-medium flex justify-between">
         <span onClick={() => props.handleOpen()} className="cursor-pointer">

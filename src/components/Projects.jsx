@@ -68,7 +68,7 @@ function Projects() {
         </div>
         <div
           data-leg="1"
-          className="box w-24 h-24 rounded-[25px] bg-[#242329] rotate-45 absolute top-1/2 left-20 -z-10 flex justify-center items-center"
+          className="box w-24 h-24 rounded-[25px] bg-[#242329] rotate-45 absolute top-1/2 left-20 -z-10 hidden md:flex justify-center items-center"
         >
           <img src={cssLogo} className="w-12 h-12 object-contain -rotate-45" alt="logo"/>
         </div>
