@@ -20,7 +20,7 @@ const colors = {
 };
 
 function App() {
-  const [theme, settheme] = useState("#4f46e5");
+  const [theme, settheme] = useState("#242329");
   const [open, setopen] = useState(false);
 
   const main = useRef();

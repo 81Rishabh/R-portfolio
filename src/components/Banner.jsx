@@ -1,12 +1,14 @@
 
-import React ,{useRef,useLayoutEffect} from "react";
+import React ,{useRef,useLayoutEffect,useContext} from "react";
 import gsap from "gsap";
 import jsLogo from "../assets/js.png";
 import reactLogo from "../assets/react.png";
 import NodeLogo from "../assets/nodejs.png";
+import { ThemeContext } from "../App";
 
 function Banner() {
   const wrapper = useRef();
+  const {theme} = useContext(ThemeContext);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -49,7 +51,7 @@ function Banner() {
     >
       <div className="wrapper">
         <div className="box w-[40rem] h-[40rem] rounded-[150px] bg-[#242329] rotate-45 absolute -left-60 -top-12"></div>
-        <div className="box justify-center items-center w-32 h-32 rounded-[30px] bg-[#242329] rotate-45 absolute md:flex top-40 right-20  md:right-[16%] md:top-1/2">
+        <div className="box justify-center items-center w-32 h-32 rounded-[30px] bg-transparent md:bg-[#242329] rotate-45 absolute md:flex bottom-0 right-0  md:right-[16%] md:top-1/2">
           <img
             src={reactLogo}
             className="w-12 h-12 object-cover"
@@ -63,7 +65,7 @@ function Banner() {
             alt="logo"
           />
         </div>
-        <div className="box w-12 h-12 rounded-xl bg-[#46454a] rotate-45 absolute left-[25%] bottom-20 flex justify-center items-center">
+        <div className="box w-12 h-12 rounded-xl bg-transparent md:bg-[#46454a] rotate-45 absolute left-[25%] bottom-20 flex justify-center items-center">
           <img
             src={NodeLogo}
             className="w-8 h-8 object-contain -rotate-45"
@@ -90,8 +92,10 @@ function Banner() {
         </div>
         {/* mouse animation */}
         <div className="flex items-center animate-upDown">
-          <div className="mouse-wraper border-4 w-6 h-10 rounded-full flex justify-center items-center">
-            <div className="wheel border-2 w-0 h-3 rounded-full"></div>
+          <div
+            style={{borderColor : theme !== '#242329' ? theme : '#fff'}}
+            className="mouse-wraper border-4 w-6 h-10 rounded-full flex justify-center items-center">
+            <div style={{borderColor : theme !== '#242329' ? theme : '#fff'}} className="wheel border-2 w-0 h-3 rounded-full"></div>
           </div>
           <div className="flex items-center text-white ml-4 text-lg">
             <span className="mr-1">Scroll Down</span>

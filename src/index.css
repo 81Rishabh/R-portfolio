@@ -39,11 +39,12 @@
     transform: rotate(45deg);
   }
 
+
   .active {
-    background: #19181c;
+    background: #000000;
     backdrop-filter: blur(10px);
-    opacity: 0.9;
   }
+  
   .colors div:hover {
     cursor: pointer;
   }
