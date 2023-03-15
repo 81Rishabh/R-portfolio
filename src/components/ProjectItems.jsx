@@ -46,7 +46,7 @@ function ProjectItems({ it }) {
             <button
               type="button"
               style={{backgroundColor : theme}}
-              className={`p-2 text-white font-medium rounded-md hover:opacity-90 shadow-md hover:scale-95 transition-all duraction-100`}
+              className={`p-2 text-white font-medium rounded-md hover:opacity-90 shadow-lg hover:scale-95 transition-all duraction-100`}
             >
               Preview 🚀
             </button>

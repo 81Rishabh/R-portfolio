@@ -72,14 +72,16 @@ function Banner() {
       <div className="content relative z-10 w-full h-72  md:w-1/2 mx-auto text-center flex justify-around flex-col items-center">
         <div>
           <h1
-            className="text-4xl md:text-6xl font-semibold text-white"
+            className="text-4xl md:text-6xl font-extrabold text-white"
             id="heading"
+            
           >
             Hi' I'm Rishabh
           </h1>
           <h2
             className="text-xl text-zinc-400 mt-3 font-medium text-indigo-200"
             id="sub-heading"
+            style={{color : theme !== '#242329' ? theme : '#fff'}}
           >
             Frontend Developer{" "}
           </h2>

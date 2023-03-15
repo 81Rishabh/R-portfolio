@@ -64,6 +64,7 @@ function Sidebar(props) {
             className="w-6 h-6 rounded-full bg-[#242329]"
             onClick={(e) => handleThemeChange(e, "gray")}
           ></div>
+          
         </div>
       </div>
     </div>
