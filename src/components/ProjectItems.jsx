@@ -8,7 +8,7 @@ function ProjectItems({ it }) {
   const { img, title, description, date, deployLink, githubLink } = it;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[40%_auto] bg-zinc-800 md:bg-transparent p-3 rounded-xl">
+    <div className="grid grid-cols-1 md:grid-cols-[40%_auto] bg-zinc-700 md:bg-transparent p-3 rounded-xl">
       <div className="left w-full flex justify-center items-start p-3">
         <img
           src={img}
@@ -55,7 +55,7 @@ function ProjectItems({ it }) {
             <button
               type="button"
               className="ml-2 bg-gradient-to-r from-zinc-500 to-gray-600 py-2 px-3 text-white font-medium rounded-md hover:opacity-90 shadow-md hover:scale-95 transition-all duraction-100 inline-flex items-center"
-            >
+             >
               Source Code
               <svg
                 width="18"

@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import Sidebar from "./components/Sidebar";
+import ContactForm from "./components/ContactForm";
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 // contenxt
@@ -95,6 +96,7 @@ function App() {
         <Navbar handleOpen={handleOpen} />
         <Banner />
         <Projects />
+        <ContactForm />
         <Footer scrollTo={scrollTo} />
       </ThemeContext.Provider>
     </div>

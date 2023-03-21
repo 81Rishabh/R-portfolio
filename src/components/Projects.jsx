@@ -52,7 +52,7 @@ function Projects() {
         <h1 className="text-xl font-bold text-white h-auto max-h-3/5 text-center md:text-left">
           Projects
         </h1>
-        <div className="project-wrapper bg-transparent md:bg-zinc-800 rounded-xl p-8 mt-5 grid grid-rows-4 gap-y-10">
+        <div className="project-wrapper bg-transparent md:bg-gradient-to-b from-zinc-700 to-zinc-900 rounded-xl p-8 mt-5 grid grid-rows-4 gap-y-10">
           {data &&
             data.map((it, index) => {
               return <ProjectItems it={it} key={index} />;

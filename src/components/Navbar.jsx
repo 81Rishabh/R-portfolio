@@ -21,7 +21,7 @@ function Navbar(props) {
     return () => document.removeEventListener('scroll' , handleScroll);
   },[]);
   return (
-    <header style={{background : theme}} className="h-24 sticky top-0 flex justify-center items-center z-40 transition ease-linear duration-300" ref={navRef}  id="header">
+    <header style={{background : theme}} className="h-24 sticky top-0 flex justify-center items-center z-30 transition ease-linear duration-300" ref={navRef}  id="header">
       <nav className="w-11/12 md:w-2/4 mx-auto flex items-center justify-between">
         <div className="navbar-logo">
           <h1 className={`text-xl font-semibold text-white relative logo before:bg-[${theme}]`}>

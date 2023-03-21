@@ -1,5 +1,4 @@
-
-import React ,{useRef,useLayoutEffect,useContext} from "react";
+import React, { useRef, useLayoutEffect, useContext } from "react";
 import gsap from "gsap";
 import jsLogo from "../assets/js.png";
 import reactLogo from "../assets/react.png";
@@ -8,11 +7,10 @@ import { ThemeContext } from "../App";
 
 function Banner() {
   const wrapper = useRef();
-  const {theme} = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-
       gsap.from("#heading", {
         duration: 1,
         y: "50px",
@@ -72,16 +70,14 @@ function Banner() {
       <div className="content relative z-10 w-full h-72  md:w-1/2 mx-auto text-center flex justify-around flex-col items-center">
         <div>
           <h1
-            className="text-4xl md:text-6xl font-extrabold text-white"
+            className="text-4xl md:text-6xl font-extrabold text-transparent bg-gradient-to-r from-green-500 to-indigo-600 bg-clip-text"
             id="heading"
-            
           >
             Hi' I'm Rishabh
           </h1>
           <h2
             className="text-xl text-zinc-400 mt-3 font-medium text-indigo-200"
             id="sub-heading"
-            style={{color : theme !== '#242329' ? theme : '#fff'}}
           >
             Frontend Developer{" "}
           </h2>
@@ -90,9 +86,13 @@ function Banner() {
         {/* mouse animation */}
         <div className="flex items-center animate-upDown">
           <div
-            style={{borderColor : theme !== '#242329' ? theme : '#fff'}}
-            className="mouse-wraper border-4 w-6 h-10 rounded-full flex justify-center items-center">
-            <div style={{borderColor : theme !== '#242329' ? theme : '#fff'}} className="wheel border-2 w-0 h-3 rounded-full"></div>
+            style={{ borderColor: theme !== "#242329" ? theme : "#fff" }}
+            className="mouse-wraper border-4 w-6 h-10 rounded-full flex justify-center items-center"
+          >
+            <div
+              style={{ borderColor: theme !== "#242329" ? theme : "#fff" }}
+              className="wheel border-2 w-0 h-3 rounded-full"
+            ></div>
           </div>
           <div className="flex items-center text-white ml-4 text-lg">
             <span className="mr-1">Scroll Down</span>
